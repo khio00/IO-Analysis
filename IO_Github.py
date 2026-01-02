@@ -345,7 +345,7 @@ elif choice == "4. 분석 결과 및 시각화":
 
                     top10_row = top10_row.reset_index(drop=True)
                     top10_row.index = top10_row.index + 1
-                    st.dataframe(top10_row.style.bar(subset=["유발액"].style.bar(subset=["유발액"], color="#4682B4"))
+                    st.dataframe(top10_row.style.bar(subset=["유발액"], color="#4682B4"))
 
                 st.markdown("---")
                 st.markdown(f"### 전체 산업 내 위상 (Ranking)")
@@ -443,4 +443,5 @@ elif choice == "4. 분석 결과 및 시각화":
             st.download_button("생산 유발계수(Lf)", convert_df(pd.DataFrame(Lf, index=names, columns=names)), "Lf_생산 유발계수.csv", "text/csv")
             st.download_button("부가가치 유발계수(Lv)", convert_df(pd.DataFrame(Lv, index=names, columns=names)), "Lv_부가가치 유발계수.csv", "text/csv")
             st.download_button("취업 유발계수(Le)", convert_df(pd.DataFrame(Le, index=names, columns=names)), "Le_취업 유발계수.csv", "text/csv")
+
             st.download_button("고용 유발계수(Lw)", convert_df(pd.DataFrame(Lw, index=names, columns=names)), "Lw_고용 유발계수.csv", "text/csv")
